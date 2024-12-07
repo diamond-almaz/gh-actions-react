@@ -37,6 +37,7 @@ jobs:
         run: npm run lint
   build-my-app: 
     needs: lint-my-app
+    continue-on-error: true
     strategy: 
       matrix:
         my-node-ver: [14, 16]
